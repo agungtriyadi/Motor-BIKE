@@ -8,8 +8,8 @@
               <img src="{{asset('assets/image/slider.1.jpg')}}" class="border-25 w-100" alt="..." >
               <div class="carousel-caption d-none d-md-block">
                 <div class="text-light">
-                  <h2 class="display-2 font-weight-lighter">Impian Kos</h2>
-                  <p>Mulai Pencarian dan Pesan Dari Sekarang</p> 
+                  <h2 class="display-2 font-weight-lighter">Motor Bike</h2>
+                  <p>Mulai Pencarian dan Beli Sekarang</p> 
                 </div>
                 <div>
                   <form class="my-2 my-lg-0">
@@ -30,9 +30,9 @@
 
     <!-- Middle Content Start -->
     <div class="container" style="align-content: center; text-align: center">
-          <h3 style="text-align: center; padding-top: 20px;">Khusus Untuk Member Impian Kos</h3>
+          <h3 style="text-align: center; padding-top: 20px;">Khusus Untuk Member Motor Bike</h3>
           <div class="text-muted">
-            <p><a href="#Masuk">Masuk</a> atau <a href="{{route('registrasi')}}">Registrasi</a></p>
+            <p><a href="{{route('login')}}">Masuk</a> atau <a href="{{route('registrasi')}}">Registrasi</a></p>
           </div>
       </div>
     <div class="row" style="text-align: center">

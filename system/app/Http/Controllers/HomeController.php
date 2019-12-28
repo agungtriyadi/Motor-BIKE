@@ -3,13 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Kamar;
+use App\Models\User;
 
 class HomeController extends Controller
 {
     public function index(){
-       $kamar =  Kamar::get();
-       dd($kamar->toArray(  ));
+       $pelanggan =  User::get();
         return view('pages.home');
     }
 
