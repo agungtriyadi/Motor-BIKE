@@ -18,9 +18,9 @@
                  <a href="{{route('home')}}"><img class="w-100" src="{{asset('assets/image/icon-logo.png')}}" alt=""></a>                 
                 </div>
                 <div class="col-8">
-                  <b class="custom-display-4">Impian Kos</b>
-                  <p style="text-align: justify">Merupakan perusahaan yang menyediakan jasa tawar menawar kos area Yogyakarta,
-                    dengan menggunakan jasa kami, anda akan mendapat banyak keuntungan baik dari pemilik kos maupun dari penawar dan
+                  <b class="custom-display-4">Motor Bike</b>
+                  <p style="text-align: justify">Merupakan perusahaan yang menyediakan penjualan Moge area Yogyakarta,
+                    dengan menggunakan jasa kami, anda akan mendapat banyak keuntungan baik Penjual maupun dari Pembeli dan
                     tidak luput diskon yang kami berikan.</p>
                 </div>
             </div>

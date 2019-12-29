@@ -13,11 +13,12 @@ class TestLagiController extends Controller {
 
     public function fnLogin(Request $request) {
         $validator = Validator::make($request->all(),
-        [
-            'username'=>'required',
-            'password'=>'required'
-        ],
-        ['username.required'=>'Nama Harus Di isikan','password.required'=>'password Diharuskan']
+            [
+                'username'=>'required',
+                'password'=>'required'
+            ],
+
+            ['username.required'=>'Nama Harus Di isikan','password.required'=>'password Diharuskan']
         );
 
         if ($validator->fails()) {
@@ -29,18 +30,21 @@ class TestLagiController extends Controller {
 
         $credentials = $request->only('email', 'password');
 
-        $email = $request->email;
-        $password = $request->password;
+            $email = $request->email;
+            $password = $request->password;
 
         if (Auth::attempt($credentials)) {
             return response()->json([
                 'status' => 200
+                
             ]);
-        }
-        return response()->json([
+        }else{
+           return response()->json([
             'status' => 500,
             'message' => 'Email dan password tidak sesuai'
-        ]);
+        ]); 
+        }
+        
         
     }
     

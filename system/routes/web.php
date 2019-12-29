@@ -34,7 +34,6 @@ Route::get('/puri_asih', 'PuriAsihController@index')->name('puri_asih');
 Route::get('/putra_bangsa', 'PutraBangsaController@index')->name('putra_bangsa');
 
 
-
 Route::get('/registrasi', 'RegistrasiController@index')->name('registrasi');
 Route::post('/registrasi', 'TestLagiController@doRegistration');
 

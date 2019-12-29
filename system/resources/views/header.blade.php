@@ -7,7 +7,7 @@
                 <div class="col-5">              
                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a>
                   <a href="{{route('home')}}" class="content_sidemenu">Beranda</a> 
-                  <a href="#" class="content_sidemenu" >Pemesanan</a>
+                  <a href="#" class="content_sidemenu" >Pembelian</a>
                 </div>
                 <div style="padding-left:20px;padding-right:20px" >
                   <hr>
@@ -33,7 +33,7 @@
                   <a class="nav-link" href="{{route('info')}}">Bantuan</a>
               </li>    
               <li class="nav-item dropdown">
-                  <a class="nav-link " href="#" >Masuk</a>
+                  <a class="nav-link " href="{{route('login')}}" >Masuk</a>
               </li>
             </ul>
           </div>  
