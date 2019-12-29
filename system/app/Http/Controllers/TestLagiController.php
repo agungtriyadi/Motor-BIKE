@@ -12,13 +12,14 @@ use Hash;
 class TestLagiController extends Controller {
 
     public function fnLogin(Request $request) {
+        //dd($request -> toArray());
         $validator = Validator::make($request->all(),
             [
-                'username'=>'required',
+                'email'=>'required|email',
                 'password'=>'required'
             ],
 
-            ['username.required'=>'Nama Harus Di isikan','password.required'=>'password Diharuskan']
+            ['email.required'=>'Nama Harus Di isikan','password.required'=>'password Diharuskan']
         );
 
         if ($validator->fails()) {
@@ -26,24 +27,23 @@ class TestLagiController extends Controller {
                 'status' => 500,
                 'message' => 'Email dan password harus diisi'
             ]);
-        }
-
+        }      
+        
         $credentials = $request->only('email', 'password');
 
             $email = $request->email;
             $password = $request->password;
 
+
         if (Auth::attempt($credentials)) {
-            return response()->json([
-                'status' => 200
-                
-            ]);
+            return view('pages.home');  
         }else{
            return response()->json([
             'status' => 500,
             'message' => 'Email dan password tidak sesuai'
         ]); 
         }
+      
         
         
     }

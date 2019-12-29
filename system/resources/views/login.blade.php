@@ -7,8 +7,8 @@
             <form action="" method="post">
                     @csrf                     
                        <div id='username' class='outerDiv'>
-	                            <label for="number">Username:</label>
-	                                <input type="text" name="username" required  />	                                   
+	                            <label for="number">E-Mail:</label>
+	                                <input type="email" name="email" required  />	                                   
                        </div>
                        <div id='password' class='outerDiv'>
 	                            <label for="password">Password:</label>

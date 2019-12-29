@@ -39,5 +39,5 @@ Route::post('/registrasi', 'TestLagiController@doRegistration');
 
 
 Route::get('/login','LoginController@pageLogin')->name('login');
-Route::post('/login','TestLagiController@doPost');
+Route::post('/login','TestLagiController@fnLogin');
 Route::post('/fnLogin', 'TestLagiController@fnLogin');
