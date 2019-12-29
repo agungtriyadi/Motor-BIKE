@@ -71,9 +71,9 @@
         </div>
         <div class="modal-body" >
           <label for="exampleInputNumber" style="margin-top: 10px">Email
-    	  <input type="font-weight-normal"  class="form-control" name="login_email" id="username"p placeholder="Input your ID name" style="width: 300px"></label>
+    	  <input type="font-weight-normal"  class="form-control" name="email" id="email" placeholder="Input your E-mail" style="width: 300px"></label>
    		  <label for="exampleInputPassword1">Password
-   		  <input type="password" class="form-control" name="login_password" id="exampleInputPassword1" placeholder="Password" style="width: 300px"></label>
+   		  <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password" style="width: 300px"></label>
         </div>
         <div class="modal-footer">
         	<a href="./Register.html" class="btn-danger" style="padding-right: 8px; padding-left: 8px; padding-bottom: 8px; padding-top: 8px;" role="button">Batal</a>
@@ -115,8 +115,8 @@
      $.ajax({
      url: _baseURL + '/fnLogin',
      data: {
-       username: $('input[name=login_email]').val(),
-       password: $('input[name=login_password]').val()
+       email: $('input[name=email]').val(),
+       password: $('input[name=password]').val()
      },
      type: 'post',
      dataType: 'json',

@@ -34,8 +34,11 @@ class TestLagiController extends Controller {
             $email = $request->email;
             $password = $request->password;
 
+            
 
         if (Auth::attempt($credentials)) {
+            //Auth::Pelanggan()->nam
+            //$request->session()->put('nama', $user->id);
             return view('pages.home');  
         }else{
            return response()->json([
