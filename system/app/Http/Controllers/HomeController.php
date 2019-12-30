@@ -3,20 +3,32 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Motor;
 use App\Models\User;
-use Illuminate\Support\Facades\Auth;
+use Auth;
 
 class HomeController extends Controller
 {
+    public function __construct(){
+        $this->middleware(['web']);
+    }
+    
     public function index(){
        
-       //dd($pelanggan->toArray());      
-        return view('pages.home');
+       //dd($pelanggan->toArray());  
+       //dd(Auth::User());
+       $motor = Motor::get();
+
+        return view('pages.home')
+            ->withData($motor)
+        ;
     }
 
     public function User(){
         $pelanggan =  User::get();
         return $pelanggan;
     }
+
+    
 
 }

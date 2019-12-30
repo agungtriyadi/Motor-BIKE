@@ -33,7 +33,11 @@
                   <a class="nav-link" href="{{route('info')}}">Bantuan</a>
               </li>    
               <li class="nav-item dropdown">
+                  @if (Auth::check())
+                  <span>{{ Auth::user()->nama }}</span>
+                  @else
                   <a class="nav-link " href="{{route('login')}}" >Masuk</a>
+                  @endif
               </li>
             </ul>
           </div>  

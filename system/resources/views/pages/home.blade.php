@@ -80,13 +80,17 @@
                           
                             <div class="swiper-wrapper">
 
+                            @foreach($data as $datamotor)
+
+                           
+
                                           <div class="swiper-slide">
                                               <div class="card mb-4 border-25">
                                                   <div>
-                                                    <img src="{{asset('assets/image/kamar1.jpg')}}" alt="" class="d-block w-100" height="150px">
+                                                    <img src="{{asset('assets/img-motor/motor/' . $datamotor->imgmtr)}}" alt="" class="d-block w-100" height="150px">
                                                   </div>
                                                   <div class="card-body">
-                                                    <h2 class="card-title pricing-card-title">IDR. 200.000 <small class="text-muted">/ Bulan</small></h2>
+                                                    <h2 class="card-title pricing-card-title">{{number_format($datamotor->hargaMtr)}}<small class="text-muted">/ Bulan</small></h2>
                                                     <ul class="list-unstyled mt-3 mb-4 text-muted">
                                                         <li><b class="jenis-kos">Putra</b> - Bantul</li>
                                                         <li type="bullet">Kost Putra Bangsa</li>
@@ -99,8 +103,8 @@
                                                   </div>
                                                 </div>
                                           </div> <!-- swiper-slide -->
-
-
+                              @endforeach
+                                <!--
                                           <div class="swiper-slide">
                                                     <div class="card border-25">
                                                         <div>
@@ -123,7 +127,7 @@
                                                         </div>
                                                       </div>
                                                     </div>
-                                            </div><!-- swiper-slide -->
+                                            </div><!-- swiper-slide 
 
 
                                             <div class="swiper-slide">                                                                  
@@ -147,7 +151,7 @@
                                                           </a>
                                                       </div>
                                                     </div>                                    
-                                            </div><!-- swiper-slide -->
+                                            </div><!-- swiper-slide 
 
                                             <div class="swiper-slide">
                                                 <div class="card mb-4 shadow-sm border-25">
@@ -169,7 +173,7 @@
                                                     </div>
                                                   </div>
                                                 </div>
-                                            </div><!-- swiper-slide -->
+                                            </div><!-- swiper-slide 
 
                                             <div class="swiper-slide">
                                                 <div class="card mb-4 shadow-sm border-25">
@@ -191,7 +195,7 @@
                                                     </div>
                                                   </div>
                                                 </div>
-                                            </div><!-- swiper-slide -->
+                                            </div><!-- swiper-slide 
 
                                             <div class="swiper-slide">
                                                 <div class="card mb-4 shadow-sm border-25">
@@ -213,7 +217,7 @@
                                                     </div>
                                                   </div>
                                                 </div>
-                                            </div><!-- swiper-slide -->
+                                            </div><!-- swiper-slide 
 
                                             <div class="swiper-slide">                                                                  
                                               <div class="card mb-4 border-25">
@@ -234,7 +238,7 @@
                                                   <button type="button" class="btn btn-lg btn-block btn-outline-primary">Telusuri</button>
                                                 </div>
                                               </div>                                    
-                                      </div><!-- swiper-slide -->
+                                      </div><!-- swiper-slide 
 
                                       <div class="swiper-slide">                                                                  
                                                     <div class="card mb-4 border-25">

@@ -89,7 +89,7 @@
     <div class="footer-copyright text-center py-3">Copyright &copy;
       <script>
         document.write(new Date().getFullYear());
-      </script> All rights reserved | This Slide is made with <i class="ion-heart" aria-hidden="true"></i> by Kelompok Impian Kos</a>
+      </script> All rights reserved | This Slide is made with <i class="ion-heart" aria-hidden="true"></i> by Kelompok Motor Bike</a>
     </div>
     <!-- Copyright -->
   

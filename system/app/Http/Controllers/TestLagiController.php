@@ -11,6 +11,10 @@ use Hash;
 
 class TestLagiController extends Controller {
 
+    public function __construct(){
+        $this->middleware(['web']);
+    }
+
     public function fnLogin(Request $request) {
         //dd($request -> toArray());
         $validator = Validator::make($request->all(),
@@ -39,7 +43,9 @@ class TestLagiController extends Controller {
         if (Auth::attempt($credentials)) {
             //Auth::Pelanggan()->nam
             //$request->session()->put('nama', $user->id);
-            return view('pages.home');  
+           // dd($request -> toArray());
+           //dd(Auth()::nama)
+            return redirect()->route('home');  
         }else{
            return response()->json([
             'status' => 500,
@@ -50,6 +56,8 @@ class TestLagiController extends Controller {
         
         
     }
+
+
     
     public function doRegistration(Request $request){
         $validator = Validator::make($request->all(),
