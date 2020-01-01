@@ -30,14 +30,9 @@
         <span class="sr-only">Next</span>
       </a>
 </div>
-    <!-- Slider End -->
+    <!-- Slider End 
 
-@foreach($promo as $dataPromo)
-  {{$dataPromo->id_motor}}
-      @foreach ($dataPromo->id_motor as $ahoy)
-          {{$ahoy}}
-      @endforeach
-@endforeach
+        
 
     <!-- Middle Content Start -->
    

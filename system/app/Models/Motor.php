@@ -28,7 +28,7 @@ class Motor extends Model
     }
 
     public function Promo(){ 
-        return $this->belongsTo('App\Models\Promo'); 
+        return $this->hasOne('App\Models\Promo'); 
     }
         
     }

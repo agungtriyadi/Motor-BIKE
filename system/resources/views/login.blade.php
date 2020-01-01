@@ -18,13 +18,13 @@
             <form class="form-signin" action="" method="post">
                 @csrf
                 <div class="form-label-group">
-                    <label for="username">username</label>
+                    <label for="email">username</label>
                     <input type="email" id="email" class="form-control" name="email" placeholder="Masukkan Email" required autofocus>
                 </div>
 
                 <div class="form-label-group">
-                    <label for="inputPassword">Password</label>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
                 </div>
                 <div class="custom-control custom-checkbox mb-3">
                     <input type="checkbox" class="custom-control-input" id="customCheck1">

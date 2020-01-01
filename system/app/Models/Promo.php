@@ -24,7 +24,7 @@ class Promo extends Model
      * @var array
      */
     public function motor(){
-    	return $this->hasMany('App\Models\Motor');
+    	return $this->hasOne('App\Models\Motor');
     }
         
 }
