@@ -43,9 +43,11 @@ class TestLagiController extends Controller {
         if (Auth::attempt($credentials)) {
             //Auth::Pelanggan()->nam
             //$request->session()->put('nama', $user->id);
-           // dd($request -> toArray());
+           //($request -> toArray());
            //dd(Auth()::nama)
-            return redirect()->route('home');  
+           return redirect()->route('home');  
+           //return view('pages.home')
+            
         }else{
            return response()->json([
             'status' => 500,

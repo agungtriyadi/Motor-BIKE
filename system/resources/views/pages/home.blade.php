@@ -5,7 +5,7 @@
 <nav class="nav">
         <div class="col">
             <div class="carousel-item active">
-              <img src="{{asset('assets/image/slider.1.jpg')}}" class="border-25 w-100" alt="..." >
+              <img src="{{asset('assets/motor/content/mtrImg1.jpg')}}" class="border-40 w-100" alt="..." >
               <div class="carousel-caption d-none d-md-block">
                 <div class="text-light">
                   <h2 class="display-2 font-weight-lighter">Motor Bike</h2>
@@ -32,7 +32,11 @@
     <div class="container" style="align-content: center; text-align: center">
           <h3 style="text-align: center; padding-top: 20px;">Khusus Untuk Member Motor Bike</h3>
           <div class="text-muted">
+          @if(Auth::check())
+            <span>Selamat datang {{Auth::User()->nama}}</span>
+          @else
             <p><a href="{{route('login')}}">Masuk</a> atau <a href="{{route('registrasi')}}">Registrasi</a></p>
+          @endif
           </div>
       </div>
     <div class="row" style="text-align: center">
@@ -82,19 +86,17 @@
 
                             @foreach($data as $datamotor)
 
-                           
-
                                           <div class="swiper-slide">
                                               <div class="card mb-4 border-25">
                                                   <div>
-                                                    <img src="{{asset('assets/img-motor/motor/' . $datamotor->imgmtr)}}" alt="" class="d-block w-100" height="150px">
+                                                    <img src="{{asset('assets/motor/motor/' . $datamotor->imgmtr)}}" alt="" class="d-block w-100" height="150px">
                                                   </div>
                                                   <div class="card-body">
-                                                    <h2 class="card-title pricing-card-title">{{number_format($datamotor->hargaMtr)}}<small class="text-muted">/ Bulan</small></h2>
+                                                    <h2 class="card-title pricing-card-title">Rp. {{number_format($datamotor->hargaMtr)}},-<small class="text-muted">/ Bulan</small></h2>
                                                     <ul class="list-unstyled mt-3 mb-4 text-muted">
-                                                        <li><b class="jenis-kos">Putra</b> - Bantul</li>
-                                                        <li type="bullet">Kost Putra Bangsa</li>
-                                                        <li type="bullet">Wifi, Perlengkapan Tidur, Kamar Mandi...</li>
+                                                        <li><b class="jenis-kos">{{$datamotor->jenisMtr}}</b></li>
+                                                        <li type="bullet">{{$datamotor->namaMtr}}</li>
+                                                        <li type="bullet">{{$datamotor->keteranganMtr}}</li>
                                                         <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small> - Upload 2 minggu yang lalu</small></li>
                                                       </ul>
                                                       <a href="{{route('putra_bangsa')}}">
@@ -103,163 +105,8 @@
                                                   </div>
                                                 </div>
                                           </div> <!-- swiper-slide -->
+
                               @endforeach
-                                <!--
-                                          <div class="swiper-slide">
-                                                    <div class="card border-25">
-                                                        <div>
-                                                            <img src="{{asset('assets/image/kamar2.jpg')}}" alt="" class="d-block w-100" height="150px">
-                                                        </div>
-                                                      <div class="card-body">
-                                                        <h2 class="card-title pricing-card-title">IDR. 50.000 <small class="text-muted">/ Bulan</small></h2>
-                                                        <ul class="list-unstyled mt-3 mb-4 text-muted">
-                                                      <li><b class="jenis-kos">Perempuan</b> - Sleman</li>
-                                                      <li type="bullet">Losmen Bikin enak</li>
-                                                      <li type="bullet">Wifi, Perlengkapan Tidur, Kamar Mandi...</li>
-                                                      <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small> - Upload 2 minggu yang lalu</small></li>
-                                                    </ul>
-                                                        <div class="row align-items-end">
-                                                          <div class="col">
-                                                          <a href="{{route('losmen')}}">
-                                                            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Telusuri</button>
-                                                          </a>
-                                                          </div>                      
-                                                        </div>
-                                                      </div>
-                                                    </div>
-                                            </div><!-- swiper-slide 
-
-
-                                            <div class="swiper-slide">                                                                  
-                                                    <div class="card mb-4 border-25">
-                                                      <div class="row">
-                                                        <div class="col">
-                                                            <img src="{{asset('assets/image/kamar3.jpg')}}" alt="" class="d-block w-100" height="150px" style="align-content: center">
-                                                        </div>
-                                                      </div>
-                                                        
-                                                      <div class="card-body"> 
-                                                        <h2 class="card-title pricing-card-title">IDR. 350.000 <small class="text-muted">/ Bulan</small></h2>
-                                                        <ul class="list-unstyled mt-3 mb-4 text-muted">
-                                                            <li><b class="jenis-kos">Perempuan</b> - Sleman</li>
-                                                            <li type="bullet">Kost Puri Asih</li>
-                                                            <li type="bullet">Wifi, Perlengkapan Tidur, Kamar Mandi...</li>
-                                                            <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small> - Upload 2 minggu yang lalu</small></li>
-                                                          </ul>
-                                                          <a href="{{route('puri_asih')}}">
-                                                              <button type="button" class="btn btn-lg btn-block btn-outline-primary">Telusuri</button>
-                                                          </a>
-                                                      </div>
-                                                    </div>                                    
-                                            </div><!-- swiper-slide 
-
-                                            <div class="swiper-slide">
-                                                <div class="card mb-4 shadow-sm border-25">
-                                                    <div>
-                                                        <img src="{{asset('assets/image/kamar4.jpg')}}" alt="" class="d-block w-100" height="150px">
-                                                    </div>
-                                                  <div class="card-body">
-                                                    <h2 class="card-title pricing-card-title">IDR. 350.000 <small class="text-muted">/ Bulan</small></h2>
-                                                    <ul class="list-unstyled mt-3 mb-4 text-muted">
-                                                      <li><b class="jenis-kos">Perempuan</b> - Sleman</li>
-                                                      <li type="bullet">Kost Ashiap</li>
-                                                      <li type="bullet">Wifi, Perlengkapan Tidur, Kamar Mandi...</li>
-                                                      <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small> - Upload 2 minggu yang lalu</small></li>
-                                                    </ul>
-                                                    <div class="row align-items-end">
-                                                      <div class="col">
-                                                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Telusuri</button>
-                                                      </div>                      
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                            </div><!-- swiper-slide 
-
-                                            <div class="swiper-slide">
-                                                <div class="card mb-4 shadow-sm border-25">
-                                                    <div>
-                                                        <img src="{{asset('assets/image/kamar5.jpg')}}" alt="" class="d-block w-100" height="150px">
-                                                    </div>
-                                                  <div class="card-body">
-                                                    <h2 class="card-title pricing-card-title">IDR. 950.000 <small class="text-muted">/ Bulan</small></h2>
-                                                    <ul class="list-unstyled mt-3 mb-4 text-muted">
-                                                      <li><b class="jenis-kos">Perempuan</b> - Sleman</li>
-                                                      <li type="bullet">Kost Pratama</li>
-                                                      <li type="bullet">Wifi, Perlengkapan Tidur, Kamar Mandi...</li>
-                                                      <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small> - Upload 2 minggu yang lalu</small></li>
-                                                    </ul>
-                                                    <div class="row align-items-end">
-                                                      <div class="col">
-                                                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Telusuri</button>
-                                                      </div>                      
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                            </div><!-- swiper-slide 
-
-                                            <div class="swiper-slide">
-                                                <div class="card mb-4 shadow-sm border-25">
-                                                    <div>
-                                                        <img src="{{asset('assets/image/kamar6.jpg')}}" alt="" class="d-block w-100" height="150px">
-                                                    </div>
-                                                  <div class="card-body">
-                                                    <h2 class="card-title pricing-card-title">IDR. 750.000 <small class="text-muted">/ Bulan</small></h2>
-                                                    <ul class="list-unstyled mt-3 mb-4 text-muted">
-                                                      <li><b class="jenis-kos">Perempuan</b> - Sleman</li>
-                                                      <li type="bullet">Kost Artipange</li>
-                                                      <li type="bullet">Wifi, Perlengkapan Tidur, Kamar Mandi...</li>
-                                                      <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small> - Upload 2 minggu yang lalu</small></li>
-                                                    </ul>
-                                                    <div class="row align-items-end">
-                                                      <div class="col">
-                                                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Telusuri</button>
-                                                      </div>                      
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                            </div><!-- swiper-slide 
-
-                                            <div class="swiper-slide">                                                                  
-                                              <div class="card mb-4 border-25">
-                                                <div class="row">
-                                                  <div class="col">
-                                                      <img src="{{asset('assets/image/kamar7.jpg')}}" alt="" class="d-block w-100" height="150px" style="align-content: center">
-                                                  </div>
-                                                </div>
-                                                  
-                                                <div class="card-body"> 
-                                                  <h2 class="card-title pricing-card-title">IDR. 350.000 <small class="text-muted">/ Bulan</small></h2>
-                                                  <ul class="list-unstyled mt-3 mb-4 text-muted">
-                                                      <li><b class="jenis-kos">Perempuan</b> - Sleman</li>
-                                                      <li type="bullet">Kost Ngestu</li>
-                                                      <li type="bullet">Wifi, Perlengkapan Tidur, Kamar Mandi...</li>
-                                                      <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small> - Upload 2 minggu yang lalu</small></li>
-                                                    </ul>
-                                                  <button type="button" class="btn btn-lg btn-block btn-outline-primary">Telusuri</button>
-                                                </div>
-                                              </div>                                    
-                                      </div><!-- swiper-slide 
-
-                                      <div class="swiper-slide">                                                                  
-                                                    <div class="card mb-4 border-25">
-                                                      <div class="row">
-                                                        <div class="col">
-                                                            <img src="{{asset('assets/image/kamar8.png')}}" alt="" class="d-block w-100" height="150px" style="align-content: center">
-                                                        </div>
-                                                      </div>
-                                                        
-                                                      <div class="card-body"> 
-                                                        <h2 class="card-title pricing-card-title">IDR. 350.000 <small class="text-muted">/ Bulan</small></h2>
-                                                        <ul class="list-unstyled mt-3 mb-4 text-muted">
-                                                            <li><b class="jenis-kos">Perempuan</b> - Sleman</li>
-                                                            <li type="bullet">Kost Podomoro</li>
-                                                            <li type="bullet">Wifi, Perlengkapan Tidur, Kamar Mandi...</li>
-                                                            <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small> - Upload 2 minggu yang lalu</small></li>
-                                                          </ul>
-                                                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Telusuri</button>
-                                                      </div>
-                                                    </div>                                    
-                                            </div><!-- swiper-slide -->
                             </div>
                           </div>
                         </div>
@@ -269,20 +116,20 @@
 
     <!-- Middle Footer Start -->
       <Div class="container">
-        <div class="row text-center"><H3>Kenapa Harus Memilih Impian Kos?</H3></div>
+        <div class="row text-center"><H3>Kenapa Lebih Memilih Motor Bike</H3></div>
         <div class="row justify-content-start">
             <div class="col-2,5">
                <img src="{{asset('assets/image/love-icon.png')}}" alt="" class="d-block" width="150px">
             </div>
             <div class="col-6" style="padding-top:50px">
               <h5>Harga Sesuai Hati</h5>
-              <p class="text-justify">Dengan menggunakan Impian Kos anda dapat memilih harga dan tempat sesuai dengan yang anda butuhkan.</p>
+              <p class="text-justify">Harga Yang kami tawarkan pastinya lebih bersahabat dibandingkan dengan start up yang lain</p>
             </div>
         </div>
         <div class="row justify-content-end">
             <div class="col-6 text-right ">
               <h5>Kemudahan Bertransaksi</h5>
-              <p class="text-justify">Anda tidak perlu datang ke Tempat penyewaan, akan tetapi anda bisa melakukan transaksi langsung melalu Impian Kos sehingga memudahkan anda dalam melakukan pemesanan dan pembayaran.</p>
+              <p class="text-justify">Dalam melakukan transaksi dengan menggunakan beberapa mitode</p>
             </div>
             <div class="col-3">
                 <img src="{{asset('assets/image/transaction-icon.png')}}" alt="" class="d-block" width="150px" height="">

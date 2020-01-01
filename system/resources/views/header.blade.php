@@ -3,9 +3,8 @@
     <div > <!-- ---------------------------------- -->
       <div class="d-flex flex-column flex-md-row align-items-center p-0 px-md-4 mb-0">
           <div class="my-0 mr-md-auto font-weight-normal">
-            <div id="mySidenav" class="sidenav">
+            <div id="mySidenav" style="heigh:60px" class="sidenav">
                 <div class="col-5">              
-                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a>
                   <a href="{{route('home')}}" class="content_sidemenu">Beranda</a> 
                   <a href="#" class="content_sidemenu" >Pembelian</a>
                 </div>
@@ -34,9 +33,9 @@
               </li>    
               <li class="nav-item dropdown">
                   @if (Auth::check())
-                  <span>{{ Auth::user()->nama }}</span>
+                    <span>{{ Auth::user()->nama}}</span>
                   @else
-                  <a class="nav-link " href="{{route('login')}}" >Masuk</a>
+                    <a class="nav-link " href="{{route('login')}}" >Masuk</a>
                   @endif
               </li>
             </ul>
