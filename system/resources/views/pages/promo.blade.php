@@ -29,141 +29,45 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-    </div>
+</div>
     <!-- Slider End -->
 
-
+@foreach($promo as $dataPromo)
+  {{$dataPromo->id_motor}}
+      @foreach ($dataPromo->id_motor as $ahoy)
+          {{$ahoy}}
+      @endforeach
+@endforeach
 
     <!-- Middle Content Start -->
    
     <!-- Middle Content End -->
 
-
-
     <!--Ending Content Start -->
-        <div class="container" style="padding-top: 30px;">
-          <div class="text-muted col">
-            <h4>Nikmati Promo Murah Impian Kos Bulan ini</h4>
-          </div>
-          <div class="container" style="padding-top: 10px;">
-              <div class="card-deck mb-3 text-left">
-                <div class="card mb-4 shadow-sm">
-                  <div>
-                    <img src="{{asset('assets/image/kamar1.jpg')}}" alt="" class="d-block w-100" height="250px">
-                  </div>
-                  <div class="card-body">
-                    <h2 class="card-title text-muted"><strike>IDR. 700.000</strike> <small class="text-muted">/ Bulan</small></h2>
-                    <h4 class="card-title pricing-card-title">Promo : IDR. 550.000 <small class="text-muted">/ Bulan</small></h4>
-                    <ul class="list-unstyled mt-3 mb-4 text-muted">
-                        <li><b class="jenis-kos">Putra</b> - Bantul</li>
-                        <li type="bullet">Kost Putra Bangsa</li>
-                        <li type="bullet">Wifi, Perlengkapan Tidur, Kamar Mandi...</li>
-                        <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small> - Update 1 hari yang lalu</small></li>
-                      </ul>
-                      <a href="{{route('putra_bangsa')}}">
-                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Telusuri</button>
-                      </a>
-                  </div>
-                </div>
-                <div class="card mb-4 shadow-sm">
-                    <div>
-                        <img src="{{asset('assets/image/kamar2.jpg')}}" alt="" class="d-block w-100" height="250px">
-                    </div>
-                  <div class="card-body">
-                    <h2 class="card-title text-muted"><strike>IDR. 500.000</strike> <small class="text-muted">/ Bulan</small></h2>
-                    <h4 class="card-title pricing-card-title">Promo : IDR. 200.000 <small class="text-muted">/ Bulan</small></h4>
-                    <ul class="list-unstyled mt-3 mb-4 text-muted">
-                      <li><b class="jenis-kos">Campur</b> - Kota Yogyakarta</li>
-                      <li type="bullet">Losmen Bikin Enak</li>
-                      <li type="bullet">Wifi, Perlengkapan Tidur, Kamar Mandi...</li>
-                      <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small> - Update 1 hari yang lalu</small></li>
-                    </ul>
-                    <div class="row align-items-end">
-                      <a href="{{route('losmen')}}">
-                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Telusuri</button>
-                      </a>                      
-                    </div>
-                  </div>
-                </div>
-                <div class="card mb-4">
-                    <div>
-                        <img src="{{asset('assets/image/kamar3.jpg')}}" alt="" class="d-block w-100" height="250px">
-                    </div>
-                  <div class="card-body"> 
-                    <h2 class="card-title text-muted"><strike>IDR. 1.200.000</strike> <small class="text-muted">/ Bulan</small></h2>
-                    <h5 class="card-title pricing-card-title">Promo : IDR. 1.199.000 <small class="text-muted">/ Bulan</small></h5>
-                    <ul class="list-unstyled mt-3 mb-4 text-muted">
-                        <li><b class="jenis-kos">Perempuan</b> - Sleman</li>
-                        <li type="bullet">Kost Puri Asih</li>
-                        <li type="bullet">Wifi, Perlengkapan Tidur, Kamar Mandi...</li>
-                        <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small> - Update 1 hari yang lalu</small></li>
-                      </ul>
-                      <a href="{{route('puri_asih')}}">
-                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Telusuri</button>
-                      </a>
-                  </div>
-                </div>
-              </div>            
+      <div class="container" style="padding-top: 10px;">       
+        <div class="card-deck mb-4 text-left">
+          <div class="card-columns">
+              @foreach($data as $datamotor)
+                      <div class="card">
+                        <img class="card-img-top" src="{{asset('assets/motor/motor/' . $datamotor->imgmtr)}}" alt="Card image cap">
+                        <div class="card-body">
+                                  <h2 class="card-title text-muted">harga <small class="text-muted">/ Bulan</small></h2>
+                                  <h4 class="card-title pricing-card-title">Promo : IDR. 550.000 <small class="text-muted">/ Bulan</small></h4>
+                                  <ul class="list-unstyled mt-3 mb-4 text-muted">
+                                      <li><b class="jenis-kos">Putra</b> - Bantul</li>
+                                      <li type="bullet">Kost Putra Bangsa</li>
+                                      <li type="bullet">Wifi, Perlengkapan Tidur, Kamar Mandi...</li>
+                                      <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small> - Update 1 hari yang lalu</small></li>
+                                    </ul>
+                                  <button type="button" class="btn btn-lg btn-block btn-outline-primary">Telusuri</button>
+                        </div>
+                      </div>
+              @endforeach
         </div>
-        <hr>
-      </div>
-      <div class="container" style="padding-top: 10px;">
-        <div class="card-deck mb-3 text-left">
-          <div class="card mb-4 shadow-sm">
-            <div>
-              <img src="{{asset('assets/image/kamar1.jpg')}}" alt="" class="d-block w-100" height="250px">
-            </div>
-            <div class="card-body">
-              <h2 class="card-title text-muted"><strike>IDR. 700.000</strike> <small class="text-muted">/ Bulan</small></h2>
-              <h4 class="card-title pricing-card-title">Promo : IDR. 550.000 <small class="text-muted">/ Bulan</small></h4>
-              <ul class="list-unstyled mt-3 mb-4 text-muted">
-                  <li><b class="jenis-kos">Putra</b> - Bantul</li>
-                  <li type="bullet">Kost Putra Bangsa</li>
-                  <li type="bullet">Wifi, Perlengkapan Tidur, Kamar Mandi...</li>
-                  <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small> - Update 1 hari yang lalu</small></li>
-                </ul>
-              <button type="button" class="btn btn-lg btn-block btn-outline-primary">Telusuri</button>
-            </div>
-          </div>
-          <div class="card mb-4 shadow-sm">
-              <div>
-                  <img src="{{asset('assets/image/kamar2.jpg')}}" alt="" class="d-block w-100" height="250px">
-              </div>
-            <div class="card-body">
-              <h2 class="card-title text-muted"><strike>IDR. 500.000</strike> <small class="text-muted">/ Bulan</small></h2>
-              <h4 class="card-title pricing-card-title">Promo : IDR. 200.000 <small class="text-muted">/ Bulan</small></h4>
-              <ul class="list-unstyled mt-3 mb-4 text-muted">
-                <li><b class="jenis-kos">Campur</b> - Kota Yogyakarta</li>
-                <li type="bullet">Losmen Bikin Enak</li>
-                <li type="bullet">Wifi, Perlengkapan Tidur, Kamar Mandi...</li>
-                <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small> - Update 1 hari yang lalu</small></li>
-              </ul>
-              <div class="row align-items-end">
-                <div class="col">
-                  <button type="button" class="btn btn-lg btn-block btn-outline-primary">Telusuri</button>
-                </div>                      
-              </div>
-            </div>
-          </div>
-          <div class="card mb-4">
-              <div>
-                  <img src="{{asset('assets/image/kamar3.jpg')}}" alt="" class="d-block w-100" height="250px">
-              </div>
-            <div class="card-body"> 
-              <h2 class="card-title text-muted"><strike>IDR. 1.200.000</strike> <small class="text-muted">/ Bulan</small></h2>
-              <h5 class="card-title pricing-card-title">Promo : IDR. 1.199.000 <small class="text-muted">/ Bulan</small></h5>
-              <ul class="list-unstyled mt-3 mb-4 text-muted">
-                  <li><b class="jenis-kos">Perempuan</b> - Sleman</li>
-                  <li type="bullet">Kost Puri Asih</li>
-                  <li type="bullet">Wifi, Perlengkapan Tidur, Kamar Mandi...</li>
-                  <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small> - Update 1 hari yang lalu</small></li>
-                </ul>
-              <button type="button" class="btn btn-lg btn-block btn-outline-primary">Telusuri</button>
-            </div>
-          </div>
-        </div>            
-  </div>
-  <hr>
-</div>
 
+      </div>
+    </div> 
+    <hr>
+
+  
 @endsection

@@ -6,7 +6,7 @@
   <tbody>
     <tr>
       <td colspan="2" align="center" bgcolor="lightblue">
-      <font style="color: gray">  <h2>PUTRA BANGSA</h2></font>
+      <font style="color: gray">  <h2>Hurley Touring Ultra Limited</h2></font>
       </td>
     </tr>
   <!--isi deskripsi start-->

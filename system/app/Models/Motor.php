@@ -23,5 +23,12 @@ class Motor extends Model
      *
      * @var array
      */
+    public function ImgMotor(){
+        return $this->hasMany('App\Models\MotorImg');
+    }
+
+    public function Promo(){ 
+        return $this->belongsTo('App\Models\Promo'); 
+    }
         
     }
