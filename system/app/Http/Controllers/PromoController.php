@@ -12,13 +12,17 @@ class PromoController extends Controller
         $motor = Motor::get();
 
        // $promo = Promo::get();
+        
+       $promo = Promo::all();
 
-       //$promo = Promo::with(['motor'])->get();
+       
+       //dd($promo->toArray());
        // dd($promo->All()); 
                             
         return view('pages.promo')
                 //->withPromo($promo)
-                ->withData($motor)      
+                ->withData($motor) 
+                ->withPromo($promo)     
         ;
        
     }

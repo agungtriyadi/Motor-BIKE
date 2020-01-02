@@ -16,19 +16,16 @@ class Motor extends Model
      * @var array
      */
 
-     protected $guarded = ['idmotor'];
+     protected $fillable  = ['idmotor', 'namaMtr', 'keteranganMtr', 'jenisMtr', 'hargaMtr', 'imgmtr'];
 
     /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
      */
-    public function ImgMotor(){
-        return $this->hasMany('App\Models\MotorImg');
-    }
 
     public function Promo(){ 
-        return $this->hasOne('App\Models\Promo'); 
+        return $this->hasMany('App\Models\Promo', 'idmotor'); 
     }
         
     }

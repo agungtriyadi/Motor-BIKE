@@ -32,12 +32,14 @@
 </div>
     <!-- Slider End 
 
-        
+          
 
     <!-- Middle Content Start -->
    
     <!-- Middle Content End -->
-
+        @foreach($promo as $prom)
+            {{$prom->motor}}
+        @endforeach
     <!--Ending Content Start -->
       <div class="container" style="padding-top: 10px;">       
         <div class="card-deck mb-4 text-left">

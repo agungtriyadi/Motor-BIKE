@@ -15,8 +15,9 @@ class Promo extends Model
      *
      * @var array
      */
+    
 
-     protected $guarded = ['idPromo'];
+     protected $fillable = ['idPromo', 'idmotor'];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -24,7 +25,7 @@ class Promo extends Model
      * @var array
      */
     public function motor(){
-    	return $this->hasOne('App\Models\Motor');
+    	return $this->belongsTo('App\Models\Motor', 'idmotor');
     }
         
 }
