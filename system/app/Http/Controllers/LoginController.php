@@ -9,4 +9,5 @@ class LoginController extends Controller
     public function pageLogin(){
         return view('login');
     }
+    
 }

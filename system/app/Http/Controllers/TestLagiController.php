@@ -59,6 +59,7 @@ class TestLagiController extends Controller {
         
     }
 
+    
 
     
     public function doRegistration(Request $request){

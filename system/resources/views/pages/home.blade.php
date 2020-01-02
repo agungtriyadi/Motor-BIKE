@@ -99,7 +99,7 @@
                                                         <li type="bullet">{{$datamotor->keteranganMtr}}</li>
                                                         <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small> - Upload 2 minggu yang lalu</small></li>
                                                       </ul>
-                                                      <a href="{{route('putra_bangsa')}}">
+                                                      <a href="#">
                                                         <button type="button" class="btn btn-lg btn-block btn-outline-primary">Telusuri</button>
                                                       </a>
                                                   </div>

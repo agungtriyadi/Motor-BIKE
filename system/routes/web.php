@@ -28,12 +28,6 @@ Route::get('/profil_pelanggan', 'PelangganController@profil')->name('profil_pela
 
 
 
-
-Route::get('/puri_asih', 'PuriAsihController@index')->name('puri_asih');
-
-Route::get('/putra_bangsa', 'PutraBangsaController@index')->name('putra_bangsa');
-
-
 Route::get('/registrasi', 'RegistrasiController@index')->name('registrasi');
 Route::post('/registrasi', 'TestLagiController@doRegistration');
 
@@ -41,3 +35,12 @@ Route::post('/registrasi', 'TestLagiController@doRegistration');
 Route::get('/login','LoginController@pageLogin')->name('login');
 Route::post('/login','TestLagiController@fnLogin');
 Route::post('/fnLogin', 'TestLagiController@fnLogin');
+
+
+
+
+
+Route::get('/admin','Admin\AdminController@Login');
+Route::get('/data_admin','Admin\DataController@LoadingPage')->name('show_data');
+Route::get('/tambah_penawaran','Admin\TambahPenawaranController@index')->name('tambah_penawaran');
+Route::get('/data_pelanggan','Admin\DataPelangganController@index')->name('data_pelanggan');

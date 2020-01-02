@@ -22,7 +22,6 @@
   </head>
   <body>
     @include('header')
-    <div onclick="closeNav()">
 
     @yield('content')
 
