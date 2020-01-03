@@ -5,7 +5,7 @@
 <nav class="nav">
         <div class="col">
             <div class="carousel-item active">
-              <img src="{{asset('assets/motor/content/mtrImg1.jpg')}}" class="border-40 w-100" alt="..." >
+              <img src="http://localhost/Backend/{{asset('assets/motor/content/mtrImg1.jpg')}}" class="border-40 w-100" alt="..." >
               <div class="carousel-caption d-none d-md-block">
                 <div class="text-light">
                   <h2 class="display-2 font-weight-lighter">Motor Bike</h2>
