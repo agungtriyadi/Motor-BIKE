@@ -31,6 +31,7 @@ Route::get('/profil_pelanggan', 'PelangganController@profil')->name('profil_pela
 Route::get('/registrasi', 'RegistrasiController@index')->name('registrasi');
 Route::post('/registrasi', 'TestLagiController@doRegistration');
 
+//Route::get('/','LoginController@logout')->name('logout');
 
 Route::get('/login','LoginController@pageLogin')->name('login');
 Route::post('/login','TestLagiController@fnLogin');

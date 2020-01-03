@@ -60,17 +60,17 @@ class TestLagiController extends Controller {
     }
 
     
-
-    
     public function doRegistration(Request $request){
         $validator = Validator::make($request->all(),
             [
-                'email'=>'required|email|unique:pelanggan',
-                'nama'=>'required',
-                'password' => 'required'
+                'email'     =>'required|email|unique:pelanggan',
+                'nama'      =>'required',
+                'password'  => 'required'
             ],
             [
-                'nama.required'=>'Nama Harus Di isikan','username.required'=>'Username Diharuskan'
+                'email.required'    =>'Email Harus Di isikan',
+                'nama.required'     =>'Nama Harus Di isikan',
+                'username.required' =>'Username Diharuskan'
             ]
             );
              if ($validator->fails()){
@@ -80,12 +80,12 @@ class TestLagiController extends Controller {
                         }
         
         $new_user = new User();
-        $new_user->nama    =       $request->input('nama');
         $new_user->email    =       $request->input('email');
+        $new_user->nama     =       $request->input('nama');
         $new_user->password =       bcrypt($request->input('password'));
         $new_user->save();
 
-        return redirect('/registrasi');
+        return redirect('/login');
  
     }
 }
