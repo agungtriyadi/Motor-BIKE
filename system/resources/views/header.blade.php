@@ -8,6 +8,9 @@
           <div>
             <ul class="nav nav-tabs justify-content-end">
               <li class="nav-item">
+                  <a class="nav-link" href="{{route('motor')}}">Motor</a>
+              </li>
+              <li class="nav-item">
                   <a class="nav-link" href="{{route('onderdil')}}">Onderdil</a>
               </li>
               <li class="nav-item">

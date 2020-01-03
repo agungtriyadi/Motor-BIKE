@@ -25,6 +25,9 @@ Route::get('/promo', 'PromoController@index')->name('promo');
 
 Route::get('/onderdil', 'OnderdilController@index')->name('onderdil');
 
+Route::get('/motor', 'MotorController@index')->name('motor');
+
+
 Route::get('/pelanggan', 'PelangganController@pelanggan')->name('pelanggan');
 Route::get('/profil_pelanggan', 'PelangganController@profil')->name('profil_pelanggan');
 
