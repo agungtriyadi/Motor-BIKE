@@ -16,7 +16,7 @@ class ImgMotor extends Model
      * @var array
      */
 
-     protected $fillabel = ['Id_imgMtr','']
+     protected $fillabel = ['Id_imgMtr']
 
     /**
      * The attributes that should be hidden for arrays.

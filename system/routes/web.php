@@ -41,6 +41,8 @@ Route::post('/fnLogin', 'TestLagiController@fnLogin');
 
 
 Route::get('/admin','Admin\AdminController@Login');
+Route::post('/admin','Admin\OperasionalAdminController@LoginAdmin');
 Route::get('/data_admin','Admin\DataController@LoadingPage')->name('show_data');
 Route::get('/tambah_penawaran','Admin\TambahPenawaranController@index')->name('tambah_penawaran');
 Route::get('/data_pelanggan','Admin\DataPelangganController@index')->name('data_pelanggan');
+Route::get('/data_promo','Admin\DataPromoController@index')->name('data_promo');

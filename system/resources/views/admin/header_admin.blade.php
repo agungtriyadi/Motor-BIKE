@@ -13,7 +13,7 @@
                <a class="nav-link text-light bg-primary" href="{{route('data_pelanggan')}}">Data Pelanggan</a>
             </li>
             <li class="nav-item" style="padding-left:10px">
-               <a class="nav-link text-light bg-primary" href="tambah.php">Promo</a>
+               <a class="nav-link text-light bg-primary" href="{{route('data_promo')}}">Promo</a>
             </li>
             <li class="nav-item" style="padding-left:10px">
                <a class="nav-link text-light bg-primary" href="tambah.php">Transaksi</a>
