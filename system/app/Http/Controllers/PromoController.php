@@ -5,24 +5,21 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Promo;
 use App\Models\Motor;
+use App\Models\BerandaImage;
 
 class PromoController extends Controller
 {
     public function index(){
-        $motor = Motor::get();
 
        // $promo = Promo::get();
         
        $promo = Promo::all();
+       $image = BerandaImage::get();
 
-       
-       //dd($promo->toArray());
-       // dd($promo->All()); 
-                            
         return view('pages.promo')
                 //->withPromo($promo)
-                ->withData($motor) 
-                ->withPromo($promo)     
+                ->withpromo($promo)
+                ->withimage($image)     
         ;
        
     }
