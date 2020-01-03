@@ -15,7 +15,7 @@
         <div class="col mx-auto">
             <div class="row justify-content-start">
                 <div class="col-3 text-center text-white">
-                 <a href="{{route('home')}}"><img class="w-100" src="{{asset('assets/image/icon-logo.png')}}" alt=""></a>                 
+                 <a href="{{route('home')}}"><img class="w-100" src="{{asset('assets/motor/content/Logo.png')}}" alt=""></a>                 
                 </div>
                 <div class="col-8">
                   <b class="custom-display-4">Motor Bike</b>

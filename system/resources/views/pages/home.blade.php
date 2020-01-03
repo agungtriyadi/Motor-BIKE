@@ -14,7 +14,7 @@
                 <div>
                   <form class="my-2 my-lg-0">
                       <div class="form-group mb-2">
-                        <input class="form-control mr-sm-2 " type="search" placeholder="Cari nama kos / daerah" aria-label="Search">
+                        <input class="form-control mr-sm-2 " type="search" placeholder="Cari" aria-label="Search">
                       </div>
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Pencarian</button>
                   </form>
