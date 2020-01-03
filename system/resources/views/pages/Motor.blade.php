@@ -3,9 +3,7 @@
 @section('content')
 
       
-    <div class="container" style="padding-top: 20px; padding-bottom: 20">
-      <hr>
-    </div>
+    
 
     
             <div class="row justify-content-end">
@@ -16,7 +14,6 @@
 
                             <div class="card center">
                                           
-                                          <div class="card mb-4 border-25">
                                               <div>
                                                 <img src="{{asset('assets/motor/motor/' . $datamotor->imgmtr)}}" alt="" class="d-block w-100" height="150px">
                                               </div>
@@ -31,15 +28,14 @@
                                                   <a href="#">
                                                     <button type="button" class="btn btn-lg btn-block btn-outline-primary">Telusuri</button>
                                                   </a>
-                                              </div>
+                                              
                                             </div>
                                       </div> <!-- swiper-slide -->
 
                                           
 
                               @endforeach
-                            </div>
-                          </div>
+                         
                         </div>
                       </div>
                     </div>

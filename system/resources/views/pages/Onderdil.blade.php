@@ -15,7 +15,6 @@
                             @foreach($data as $dataonderdil)
 
                             <div class="card center">
-                                              <div class="card mb-4 border-25">
                                                   <div class="card-img-top">
                                                       <img src="{{asset('assets/motor/Onderdil/' . $dataonderdil->imgOnderdil)}}" alt="" class="d-block w-100" height="150px">
                                                   </div>
@@ -28,7 +27,6 @@
                                                       <a href="#">
                                                         <button type="button" class="btn btn-lg btn-block btn-outline-primary">Telusuri</button>
                                                       </a>
-                                                  </div>
                                                 </div>
                                           </div> <!-- swiper-slide -->                                    
                               @endforeach
