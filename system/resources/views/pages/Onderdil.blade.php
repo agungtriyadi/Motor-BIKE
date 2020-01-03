@@ -24,7 +24,7 @@
                                                         <li><b class="jenis-kos">{{$dataonderdil->namaOnderdil}}</b></li>
                                                         <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small>{{$dataonderdil->updated_at}}</small></li>
                                                       </ul>
-                                                      <a href="#">
+                                                      <a href="{{route('onderdildetail', ['id' => $dataonderdil->idOnderdil])}}">
                                                         <button type="button" class="btn btn-lg btn-block btn-outline-primary">Telusuri</button>
                                                       </a>
                                                 </div>
