@@ -15,7 +15,8 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/info', 'InfoController@index')->name('info');
 
-Route::get('/moge1', 'MogeController@Moge1')->name('moge1');
+Route::get('/moge1/{id}', 'MogeController@Moge1')->name('moge1');
+
 
 Route::get('/chat', 'ChatController@index')->name('chat');
 
