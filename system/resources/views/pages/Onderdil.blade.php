@@ -14,7 +14,7 @@
           <div class="card-columns">
                             @foreach($data as $dataonderdil)
 
-                                          <div class="swiper-slide">
+                            <div class="card center">
                                               <div class="card mb-4 border-25">
                                                   <div class="card-img-top">
                                                       <img src="{{asset('assets/motor/Onderdil/' . $dataonderdil->imgOnderdil)}}" alt="" class="d-block w-100" height="150px">

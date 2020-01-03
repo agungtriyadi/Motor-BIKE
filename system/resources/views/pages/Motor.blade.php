@@ -14,7 +14,7 @@
           <div class="card-columns">
                             @foreach($data as $datamotor)
 
-                            <div class="swiper-slide">
+                            <div class="card center">
                                           
                                           <div class="card mb-4 border-25">
                                               <div>
