@@ -53,16 +53,16 @@
               @foreach($promo as $dataPromo)
                       <div class="card center">
                         <img class="card-img-top" src="{{asset('assets/motor/motor/' . $dataPromo->motor['imgmtr'])}}"  alt="Card image cap">
-                            <div class="card-body">
-                                      <h2 class="card-title text-muted">IDR. <span style="text-decoration: line-through">{{$dataPromo->motor['hargaMtr']}}</span></small></h2>
-                                      <h4 class="card-title pricing-card-title">Promo : IDR. {{$dataPromo->hargaPromo}}</h4>
-                                      <ul class="list-unstyled mt-3 mb-4 text-muted">
-                                          <li><b class="jenis-kos">Plat</b> <b>{{$dataPromo->motor['platMtr']}}</b></li>
-                                          <li type="bullet">{{$dataPromo->motor['keteranganMtr']}}</li>
-                                          <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small> - Update {{$dataPromo->updated_at}}</small></li>
-                                      </ul>
-                                      <button type="button" class="btn btn-lg btn-block btn-outline-primary" >Telusuri</button>
-                            </div>
+                          <div class="card-body">
+                                    <h2 class="card-title text-muted">IDR. <span style="text-decoration: line-through">{{$dataPromo->motor['hargaMtr']}}</span></small></h2>
+                                    <h4 class="card-title pricing-card-title">Promo : IDR. {{$dataPromo->hargaPromo}}</h4>
+                                    <ul class="list-unstyled mt-3 mb-4 text-muted">
+                                        <li><b class="jenis-kos">Plat</b> <b>{{$dataPromo->motor['platMtr']}}</b></li>
+                                        <li type="bullet">{{$dataPromo->motor['keteranganMtr']}}</li>
+                                        <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small> - Update {{$dataPromo->updated_at}}</small></li>
+                                    </ul>
+                                    <button type="button" class="btn btn-lg btn-block btn-outline-primary" >Telusuri</button>
+                          </div>
                       </div>
               @endforeach
         </div>

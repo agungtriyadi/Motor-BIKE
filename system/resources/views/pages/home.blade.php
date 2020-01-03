@@ -84,29 +84,26 @@
                           
                             <div class="swiper-wrapper">
 
-                            @foreach($data as $datamotor)
+                            @foreach($promo as $dataPromo)
 
                                           <div class="swiper-slide">
                                           
                                               <div class="card mb-4 border-25">
                                                   <div>
-                                                    <img src="{{asset('assets/motor/motor/' . $datamotor->imgmtr)}}" alt="" class="d-block w-100" height="150px">
+                                                      <img class="card-img-top" src="{{asset('assets/motor/motor/' . $dataPromo->motor['imgmtr'])}}"  alt="Card image cap">
+                                                          <div class="card-body">
+                                                                    <h2 class="card-title text-muted">IDR. <span style="text-decoration: line-through">{{$dataPromo->motor['hargaMtr']}}</span></small></h2>
+                                                                    <h4 class="card-title pricing-card-title">Promo : IDR. {{$dataPromo->hargaPromo}}</h4>
+                                                                    <ul class="list-unstyled mt-3 mb-4 text-muted">
+                                                                        <li><b class="jenis-kos">Plat</b> <b>{{$dataPromo->motor['platMtr']}}</b></li>
+                                                                        <li type="bullet">{{$dataPromo->motor['keteranganMtr']}}</li>
+                                                                        <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small> - Update {{$dataPromo->updated_at}}</small></li>
+                                                                    </ul>
+                                                                    <button type="button" class="btn btn-lg btn-block btn-outline-primary" >Telusuri</button>
+                                                          </div>
                                                   </div>
-                                                  <div class="card-body">
-                                                    <h2 class="card-title pricing-card-title">Rp. {{number_format($datamotor->hargaMtr)}},-<small class="text-muted">/ Bulan</small></h2>
-                                                    <ul class="list-unstyled mt-3 mb-4 text-muted">
-                                                        <li><b class="jenis-kos">{{$datamotor->jenisMtr}}</b></li>
-                                                        <li type="bullet">{{$datamotor->namaMtr}}</li>
-                                                        <li type="bullet">{{$datamotor->keteranganMtr}}</li>
-                                                        <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small> - Upload 2 minggu yang lalu</small></li>
-                                                      </ul>
-                                                      <a href="#">
-                                                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Telusuri</button>
-                                                      </a>
-                                                  </div>
-                                                </div>
-                                          </div> <!-- swiper-slide -->
-
+                                              </div> <!-- swiper-slide -->
+                                        </div>
                               @endforeach
                             </div>
                           </div>

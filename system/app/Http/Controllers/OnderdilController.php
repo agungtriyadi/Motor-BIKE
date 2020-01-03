@@ -8,19 +8,18 @@ use App\Models\Onderdil;
 class OnderdilController extends Controller
 {
     public function index(){
-        $datonderdil = onderdil::get();
+
+        $datonderdil = Onderdil::get();
 
        // $onderdil = Onderdil::get();
-        
-       $onderdil = onderdil::all();
 
        
-       //dd($onderdil->toArray());
+        ($datonderdil->toArray());
        // dd($onderdil->All()); 
                             
         return view('pages.onderdil')
                 //->withOnderdil($onderdil)
-                ->withData($onderdil)   
+                ->withData($datonderdil)   
         ;
        
     }

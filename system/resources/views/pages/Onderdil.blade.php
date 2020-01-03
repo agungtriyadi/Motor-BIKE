@@ -17,7 +17,7 @@
                                           <div class="swiper-slide">
                                               <div class="card mb-4 border-25">
                                                   <div class="card-img-top">
-                                                    <img src="{{asset('assets/Onderdil/Onderdil/' . $dataonderdil->imgondr)}}" alt="" class="d-block w-100" height="150px">
+                                                      <img src="{{asset('assets/motor/Onderdil/' . $dataonderdil->imgOnderdil)}}" alt="" class="d-block w-100" height="150px">
                                                   </div>
                                                   <div class="card-body">
                                                     <h2 class="card-title pricing-card-title">Rp. {{number_format($dataonderdil->hargaOnderdil)}},-<small class="text-muted">/ Pcs</small></h2>
@@ -30,10 +30,7 @@
                                                       </a>
                                                   </div>
                                                 </div>
-                                          </div> <!-- swiper-slide -->
-
-                                          
-
+                                          </div> <!-- swiper-slide -->                                    
                               @endforeach
                             </div>
                           </div>

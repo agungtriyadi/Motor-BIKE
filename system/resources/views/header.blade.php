@@ -3,7 +3,7 @@
     <div style="padding-top:10px; padding-bottom:20px" > <!-- ---------------------------------- -->
       <div class="d-flex flex-column flex-md-row align-items-center p-0 px-md-4 mb-0">
           <div class="my-0 mr-md-auto font-weight-normal"> 
-            <a href="{{route('home')}}"><img src="{{asset('assets/image/logo-IMK.png')}}" alt="" height="50px" width="50px"></a> 
+            <a href="{{route('home')}}"><img src="{{asset('assets/motor/content/Logo.png')}}" alt="" height="50px" width="50px"></a> 
           </div>
           <div>
             <ul class="nav nav-tabs justify-content-end">

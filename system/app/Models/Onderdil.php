@@ -17,7 +17,7 @@ class Onderdil extends Model
      */
     
 
-    protected $fillable  = ['idmotor', 'hargaOnderdil', 'namaOnderdil', 'imgondr'];
+    protected $fillable  = ['idOnderdil', 'hargaOnderdil', 'namaOnderdil', 'imgondr'];
 
     /**
      * The attributes that should be hidden for arrays.
