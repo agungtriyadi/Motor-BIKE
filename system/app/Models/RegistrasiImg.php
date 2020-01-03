@@ -4,11 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ImgMotor extends Model
+class RegistrasiImg extends Model
 {
 
-    protected $table = 'imagemtr';
-    protected $primaryKey = 'id_ImgMtr';
+    protected $table = 'registrasi_image';
+    protected $primaryKey = 'id';
 
     /**
      * The attributes that are mass assignable.
@@ -16,12 +16,16 @@ class ImgMotor extends Model
      * @var array
      */
 
-     protected $fillabel = ['Id_imgMtr'];
+     protected $fillable  = ['id', 'nama'];
 
     /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
      */
+
+    public function Promo(){ 
+        return $this->hasMany('App\Models\Promo', 'idmotor'); 
+    }
         
     }

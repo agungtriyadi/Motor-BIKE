@@ -21,7 +21,7 @@
               </li>    
               <li class="nav-item dropdown">
                   @if (Auth::check())
-                      <a class="nav-link " href="#" >Logout</a>
+                      <a class="nav-link " href="{{route('login')}}" >Logout</a>
                     <!-- <span>{{ Auth::user()->nama}}</span> -->
                   @else
                     <a class="nav-link" href="{{route('login')}}" >Masuk</a>

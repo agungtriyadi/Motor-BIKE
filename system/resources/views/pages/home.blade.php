@@ -87,6 +87,7 @@
                             @foreach($data as $datamotor)
 
                                           <div class="swiper-slide">
+                                          
                                               <div class="card mb-4 border-25">
                                                   <div>
                                                     <img src="{{asset('assets/motor/motor/' . $datamotor->imgmtr)}}" alt="" class="d-block w-100" height="150px">

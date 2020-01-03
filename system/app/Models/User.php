@@ -12,13 +12,15 @@ class User extends Authenticatable
     protected $table = 'pelanggan';
     protected $primaryKey = 'id_pelanggan';
 
+    
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','status',
     ];
 
     /**

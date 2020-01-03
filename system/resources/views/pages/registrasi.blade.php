@@ -6,53 +6,48 @@
 	<div class="col-12">
 	<div class="row">
 	<!-- Slideshow container -->
-		<div class="slideshow-container">
+    <div class="col-9">
+    
+              <div class="slideshow-container">
 
-  <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="{{asset('assets/image/slider1.jpg')}}" class="border-25 w-100">
-    <div class="text">Harga Murah</div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="{{asset('assets/image/slider2.jpg')}}" class="border-25 w-100">
-    <div class="text">Kualitas Mewah</div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img src="{{asset('assets/image/slider3.jpg')}}" class="border-25 w-100">
-    <div class="text">Suasana Seperti Hotel</div>
-  </div>
-</div>
-
+            <!-- Full-width images with number and caption text -->
+                        @foreach($data as $img)  
+                          <div class="mySlides fade">
+                            <img src="{{asset('assets/motor/registrasi/'. $img->nama)}}" class="border-25 w-100">
+                          </div>
+                        @endforeach
+              </div>
+    </div>
 
  
 <div class="col-3">
     <form action="" method="post">
-    {{csrf_field()}}
-  		<div class="form-group">
-    		<label for="exampleInputNumber">Email</label>
-    		<input type="text" class="form-control" id="exampleInputNumber" placeholder="Email" name="email" style="width: 300px">
- 		</div>
+          {{csrf_field()}}
 
-    <div class="form-group">
-   			 <label for="exampleInputPassword1">Nama</label>
-   			 <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Masukkan Nama" name="nama" style="width: 	300px">
-  	</div>
-  	<div class="form-group">
-    		<label for="exampleInputPassword1" >Creat Password</label>
-    		<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" style="width: 300px">
-  	</div>  		
-  	<label>Setuju syarat dan ketentuan </label> 
-  	<div class="checkbox">Check me out</div>
-  	<button class="btn btn-success my-2 my-sm-0" type="submit" style="margin-left: 100px">Registrasi</button>
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text" class="form-control" id="email" placeholder="Masukkan Email" name="email" style="width: 300px">
+          </div>
+
+          <div class="form-group">
+              <label for="nama">Nama</label>
+              <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama" name="nama" style="width: 	300px">
+          </div>
+
+          <div class="form-group">
+              <label for="password" >Creat Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Password" name="password" style="width: 300px">
+          </div>  
+
+  	          <label>Setuju syarat dan ketentuan </label> 
+
+  	      <div class="checkbox">Check me out</div>
+  	      
+            <button class="btn btn-success my-2 my-sm-0" type="submit" style="margin-left: 100px">Registrasi</button>
   		
-      <div class="text-muted" style="margin-left: 50px">
-            <p>Sudah punya akun? </p></div>
-  		</form>
+              <div class="text-muted" style="margin-left: 50px">
+                    <p>Sudah punya akun? </p></div>
+  	</form>
 
             <!-- Trigger the modal with a button -->
   		<a href="" class="link" data-toggle="modal" data-target="#myModal">Masuk</a> </p>
