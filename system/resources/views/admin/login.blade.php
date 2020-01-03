@@ -16,23 +16,26 @@
           <div class="card-body">
                 <img src="{{asset('assets/image/avatar.png')}}" class="rounded mx-auto d-block"" width="200"/>    
             <h5 class="card-title text-center">Silahkan masuk</h5>
-            <form class="form-signin">
+
+
+            <form class="form-signin" action="" method="post" >
              @csrf
-              <div class="form-label-group">
-                <label for="username">username</label>
-                <input type="text" id="username" class="form-control" placeholder="username" required autofocus>
-              </div>
 
-              <div class="form-label-group">
-                <label for="inputPassword">Password</label>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-              </div>
+                  <div class="form-label-group">
+                    <label for="namaAdmin">username</label>
+                    <input type="text" id="namaAdmin" class="form-control" name="namaAdmin" placeholder="username" required autofocus>
+                  </div>
 
-              <div class="custom-control custom-checkbox mb-3">
-                <input type="checkbox" class="custom-control-input" id="customCheck1">
-              </div>
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit"> <a href="data.php" class="text-light">Masuk</a></button>
-                 </form>
+                  <div class="form-label-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+                  </div>
+
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  </div>
+                  <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Masuk</button>
+            </form>
           </div>
         </div>
       </div>

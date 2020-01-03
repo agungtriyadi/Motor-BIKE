@@ -39,9 +39,9 @@
 
     <!-- Middle Content Start -->
    
-    <!-- Middle Content End 
+    <!-- Middle Content End
         @foreach($promo as $prom)
-            {{$prom->motor}}
+            {{$prom->motor['idmotor']}}
         @endforeach
     <!--Ending Content Start -->
       <div class="container" style="padding-top: 10px;">       
