@@ -66,8 +66,37 @@
     <!--nav deskripsi end-->
       </div>
 
-<div style="padding-left:20px; padding-top:20px">
-    <div class="col-sm-8 ">               
+<div style="padding-left:20px; padding-top:20px" class="row">
+    <div class="col-sm-8">   
+              
+    <div class="swiper-container oflow-visible" data-slide-effect="slide" data-autoheight="false" 
+                              data-swiper-speed="900" data-swiper-margin="25" data-swiper-slides-per-view="4"
+                              data-swiper-breakpoints="true" data-scrollbar="true" data-swiper-loop="false"
+                              data-swpr-responsive="[1, 2, 2, 2]">
+                          
+          <div class="swiper-wrapper">
+
+                @foreach($promo as $dataPromo)
+
+                            <div class="swiper-slide">
+                                
+                                  <div class="card mb-4 border-25">
+                                      <div>
+                                          <img class="card-img-top" src="{{asset('assets/motor/motor/' . $dataPromo->motor['imgmtr'])}}"  alt="Card image cap">
+                                              <div class="card-body">
+                                                        <h4 class="card-title text-muted">IDR. <span style="text-decoration: line-through">{{number_format($dataPromo->motor['hargaMtr'])}}</span></small></h4>
+                                                        <h6 class="card-title pricing-card-title">Promo : IDR.  {{number_format($dataPromo->hargaPromo)}}</h6>
+                                                       
+                                                        <button type="button" class="btn btn-lg btn-block btn-outline-primary" >Telusuri</button>
+                                              </div>
+                                      </div>
+                                  </div> <!-- swiper-slide -->
+                            </div>
+                @endforeach
+
+          </div>
+    </div>
+
     </div>
 
     <div class="col-sm-4">
@@ -85,9 +114,15 @@
                           <li type="bullet">{{$data->keteranganMtr}}</li>
                           <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small>{{$data->updated_at}}</small></li>
                         </ul>
-                        <a href="{{route('moge1', ['id' => $data->idmotor])}}">
-                          <button type="button" class="btn btn-lg btn-block btn-outline-primary">Pesan Sekarang</button>
-                        </a>
+                        @if (Auth::check())
+                              <a href="{{route('pemesanan_motor', ['id' => $data -> idmotor])}}">
+                                <button type="button" class="btn btn-lg btn-block btn-outline-primary">Pesan Sekarang</button>
+                              </a>
+                        @else
+                              <a href="{{route('login')}}">
+                                      <button type="button" class="btn btn-lg btn-block btn-outline-primary">Login Untuk Login</button>
+                              </a>                      
+                        @endif
                 </form>
               </div>
           

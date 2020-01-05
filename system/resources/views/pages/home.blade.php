@@ -5,7 +5,7 @@
 <nav class="nav">
         <div class="col">
             <div class="carousel-item active">
-              <img src="http://localhost/Backend/{{asset('assets/motor/content/mtrImg1.jpg')}}" class="border-40 w-100" alt="..." >
+              <img src="{{asset('assets/motor/content/mtrImg1.jpg')}}" class="border-40 w-100" alt="..." >
               <div class="carousel-caption d-none d-md-block">
                 <div class="text-light">
                   <h2 class="display-2 font-weight-lighter">Motor Bike</h2>
@@ -93,7 +93,7 @@
                                                       <img class="card-img-top" src="{{asset('assets/motor/motor/' . $dataPromo->motor['imgmtr'])}}"  alt="Card image cap">
                                                           <div class="card-body">
                                                                     <h2 class="card-title text-muted">IDR. <span style="text-decoration: line-through">{{$dataPromo->motor['hargaMtr']}}</span></small></h2>
-                                                                    <h4 class="card-title pricing-card-title">Promo : IDR.  {{number_format($dataPromo->hargaPromo)}}</h4>
+                                                                    <h6 class="card-title pricing-card-title">Promo : IDR.  {{number_format($dataPromo->hargaPromo)}}</h6>
                                                                     <ul class="list-unstyled mt-3 mb-4 text-muted">
                                                                         <li><b class="jenis-kos">Plat</b> <b>{{$dataPromo->motor['platMtr']}}</b></li>
                                                                         <li type="bullet">{{$dataPromo->motor['keteranganMtr']}}</li>
@@ -127,7 +127,7 @@
         <div class="row justify-content-end">
             <div class="col-6 text-right ">
               <h5>Kemudahan Bertransaksi</h5>
-              <p class="text-justify">Dalam melakukan transaksi dengan menggunakan beberapa mitode</p>
+              <p class="text-justify">Dalam melakukan transaksi dengan menggunakan beberapa Mitode</p>
             </div>
             <div class="col-3">
                 <img src="{{asset('assets/image/transaction-icon.png')}}" alt="" class="d-block" width="150px" height="">
@@ -139,13 +139,13 @@
           </div>
           <div class="col-6" style="padding-top:50px">
             <h5>Diskon Terbaik</h5>
-            <p class="text-justify">Kerja sama yang kami jalin dengan pemilik kos dapat memuculkan potongan harga yang tebaik</p>
+            <p class="text-justify">Kerja sama yang kami jalin beberapa pemilik motor dapat memuculkan potongan harga yang tebaik</p>
           </div>
         </div>
         <div class="row justify-content-end" style="padding-bottom: 50px;">
           <div class="col-6 text-right" style="padding-top: 30px;">
-            <h5>Kemudahan Bertransaksi</h5>
-            <p class="text-justify">Anda tidak perlu datang ke Tempat penyewaan, akan tetapi anda bisa melakukan transaksi langsung melalu Impian Kos sehingga memudahkan anda dalam melakukan pemesanan dan pembayaran.</p>
+            <h5>Barang Terjamin Keasliannya</h5>
+            <p class="text-justify">Percayakan barang yang kami jual, walau dengan harga yang murah, kami tidak menjual barang dari pasar gelap</p>
           </div>
           <div class="col-3">
               <img src="{{asset('assets/image/security-icon.png')}}" alt="" class="d-block" width="150px" height="">
