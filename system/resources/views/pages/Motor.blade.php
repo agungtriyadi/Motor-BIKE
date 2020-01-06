@@ -10,7 +10,8 @@
             <div class="container" style="padding-top: 10px;">       
         <div class="card-deck mb-4 text-left">
           <div class="card-columns">
-                            @foreach($data as $datamotor)
+                            
+                            @foreach($motor as $datamotor)
 
                             <div class="card center">
                                           

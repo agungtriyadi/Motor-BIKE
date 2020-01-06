@@ -19,6 +19,11 @@
               <li class="nav-item">
                   <a class="nav-link" href="#">Tersimpan</a>
               </li>
+              <!--  @if (Auth::check())
+              <li class="nav-item">
+                  <a href="]]></a>
+              </li> 
+              @endif -->
               <li class="nav-item">
                   <a class="nav-link" href="{{route('info')}}">Bantuan</a>
               </li>    

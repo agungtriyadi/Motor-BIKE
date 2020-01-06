@@ -29,7 +29,13 @@ Route::get('/promo', 'PromoController@index')->name('promo');
 
 Route::get('/onderdil', 'OnderdilController@index')->name('onderdil');
 
+
+
 Route::get('/motor', 'MotorController@index')->name('motor');
+
+
+
+
 
 
 Route::get('/pelanggan', 'PelangganController@pelanggan')->name('pelanggan');
@@ -40,7 +46,7 @@ Route::get('/profil_pelanggan', 'PelangganController@profil')->name('profil_pela
 Route::get('/registrasi', 'RegistrasiController@index')->name('registrasi');
 Route::post('/registrasi', 'TestLagiController@doRegistration');
 
-//Route::get('/','LoginController@logout')->name('logout');
+Route::get('logout','LoginController@logout')->name('logout');
 
 Route::get('/login','LoginController@pageLogin')->name('login');
 Route::post('/login','TestLagiController@fnLogin');

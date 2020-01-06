@@ -8,19 +8,20 @@ use App\Models\Motor;
 class MotorController extends Controller
 {
     public function index(){
-        $datamotor = motor::get();
+        //$datamotor = motor::get();
 
        // $motor = Motor::get();
         
        $motor = motor::all();
 
+       //dd($motor->toArray());
        
        //dd($onderdil->toArray());
        // dd($onderdil->All()); 
                             
         return view('pages.Motor')
                 //->withOnderdil($onderdil)
-                ->withData($motor)   
+                ->withmotor($motor)   
         ;
        
     }

@@ -45,6 +45,7 @@ class TestLagiController extends Controller {
             //$request->session()->put('nama', $user->id);
            //($request -> toArray());
            //dd(Auth()::nama)
+           //return redirect()->back();
            return redirect()->route('home');  
            //return view('pages.home')
             

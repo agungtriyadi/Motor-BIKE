@@ -13,7 +13,8 @@ class MogeController extends Controller
 
     public function Moge1(Request $request, $id){ 
 
-        $dataPromo = Promo::get();        
+        $dataPromo = Promo::get();  
+              
         $dataMotor = Motor::where('idmotor','=', $id)->first();
         //dd($motor->toArray()); 
         return view('pages.moge1', ['data' => $dataMotor])
