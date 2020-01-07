@@ -34,7 +34,7 @@ Route::get('/onderdil', 'OnderdilController@index')->name('onderdil');
 Route::get('/motor', 'MotorController@index')->name('motor');
 
 
-
+Route::get('/data_pemesanan','PemesananController@data_pemesanan')->name('data_pemesanan');
 
 
 

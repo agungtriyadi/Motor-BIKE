@@ -5,7 +5,7 @@
 <nav class="nav">
         <div class="col">
             <div class="carousel-item active">
-              <img src="{{asset('assets/motor/content/mtrImg1.jpg')}}" class="border-40 w-100" alt="..." >
+              <img src="http://localhost/Backend/assets/motor/content/mtrImg1.jpg" class="border-40 w-100" alt="..." >
               <div class="carousel-caption d-none d-md-block">
                 <div class="text-light">
                   <h2 class="display-2 font-weight-lighter">Motor Bike</h2>
@@ -41,19 +41,19 @@
       </div>
     <div class="row" style="text-align: center">
       <div class="col">
-          <img src="{{asset('assets/image/caution.png')}}" alt="" style="width: 100px; height: 100px">
+          <img src="http://localhost/Backend/assets/image/caution.png" alt="" style="width: 100px; height: 100px">
           <h5>Laporan Pelanggaran</h5>
       </div>
       <div class="col">
-          <img src="{{asset('assets/image/discount.png')}}" alt="" style="width: 100px; height: 100px">
+          <img src="http://localhost/Backend/assets/image/discount.png" alt="" style="width: 100px; height: 100px">
           <h5>Kartu Diskon</h5>
       </div>
       <div class="col">
-          <img src="{{asset('assets/image/saved-list.png')}}" alt="" style="width: 100px; height: 100px">
+          <img src="http://localhost/Backend/assets/image/saved-list.png" alt="" style="width: 100px; height: 100px">
           <h5>Daftar Simpanan</h5>
       </div>
       <div class="col">
-          <img src="{{asset('assets/image/riwayat.png')}}" alt="" style="width: 100px; height: 100px">
+          <img src="http://localhost/Backend/assets/image/riwayat.png" alt="" style="width: 100px; height: 100px">
           <h5>Riwayat Transaksi</h5>
       </div>
     </div>
@@ -90,14 +90,14 @@
                                           
                                               <div class="card mb-4 border-25">
                                                   <div>
-                                                      <img class="card-img-top" src="{{asset('assets/motor/motor/' . $dataPromo->motor['imgmtr'])}}"  alt="Card image cap">
+                                                      <img class="card-img-top" src="http://localhost/Backend/assets/motor/motor/{{$dataPromo->motor['imgmtr']}}"  alt="Card image cap">
                                                           <div class="card-body">
                                                                     <h2 class="card-title text-muted">IDR. <span style="text-decoration: line-through">{{$dataPromo->motor['hargaMtr']}}</span></small></h2>
                                                                     <h6 class="card-title pricing-card-title">Promo : IDR.  {{number_format($dataPromo->hargaPromo)}}</h6>
                                                                     <ul class="list-unstyled mt-3 mb-4 text-muted">
                                                                         <li><b class="jenis-kos">Plat</b> <b>{{$dataPromo->motor['platMtr']}}</b></li>
                                                                         <li type="bullet">{{$dataPromo->motor['keteranganMtr']}}</li>
-                                                                        <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small> - Update {{$dataPromo->updated_at}}</small></li>
+                                                                        <li type="bullet"><img src="http://localhost/Backend/assets/image/small-centang.png" alt="" style="width: 10px"><small> - Update {{$dataPromo->updated_at}}</small></li>
                                                                     </ul>
                                                                     <button type="button" class="btn btn-lg btn-block btn-outline-primary" >Telusuri</button>
                                                           </div>
@@ -117,7 +117,7 @@
         <div class="row text-center"><H3>Kenapa Lebih Memilih Motor Bike</H3></div>
         <div class="row justify-content-start">
             <div class="col-2,5">
-               <img src="{{asset('assets/image/love-icon.png')}}" alt="" class="d-block" width="150px">
+               <img src="http://localhost/Backend/assets/image/love-icon.png" alt="" class="d-block" width="150px">
             </div>
             <div class="col-6" style="padding-top:50px">
               <h5>Harga Sesuai Hati</h5>
@@ -130,12 +130,12 @@
               <p class="text-justify">Dalam melakukan transaksi dengan menggunakan beberapa Mitode</p>
             </div>
             <div class="col-3">
-                <img src="{{asset('assets/image/transaction-icon.png')}}" alt="" class="d-block" width="150px" height="">
+                <img src="http://localhost/Backend/assets/image/transaction-icon.png" alt="" class="d-block" width="150px" height="">
             </div>
         </div>
         <div class="row justify-content-start">
           <div class="col-2,5">
-             <img src="{{asset('assets/image/discount.png')}}" alt="" class="d-block" width="150px">
+             <img src="http://localhost/Backend/assets/image/discount.png" alt="" class="d-block" width="150px">
           </div>
           <div class="col-6" style="padding-top:50px">
             <h5>Diskon Terbaik</h5>
@@ -148,7 +148,7 @@
             <p class="text-justify">Percayakan barang yang kami jual, walau dengan harga yang murah, kami tidak menjual barang dari pasar gelap</p>
           </div>
           <div class="col-3">
-              <img src="{{asset('assets/image/security-icon.png')}}" alt="" class="d-block" width="150px" height="">
+              <img src="http://localhost/Backend/assets/image/security-icon.png" alt="" class="d-block" width="150px" height="">
           </div>
         </div>
       </Div>        

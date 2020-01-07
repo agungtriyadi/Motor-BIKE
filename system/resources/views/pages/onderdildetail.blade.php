@@ -13,7 +13,7 @@
                       <div class="carousel-inner">                                                      
                                   <div class="carousel-item active">
                                       <!--item slider start-->
-                                      <img src="{{asset('assets/motor/onderdil/' . $data->imgOnderdil)}}" class="d-block w-100 " alt="...">
+                                      <img src="http://localhost/Backend/assets/motor/onderdil/{{$data->imgOnderdil}}" class="d-block" alt="...">
                                   </div>
                       </div>
                       
@@ -23,7 +23,7 @@
             <!--start deskripsi video-->
           <div role="tabpanel" class="tab-pane fade" id="video"> 
             <video controls="controls" width="100%" height="440">
-              <source src="{{asset('assets/vid/b.mp4')}}" type="video/mp4" />              
+              <source src="http://localhost/Backend/assets/vid/b.mp4" type="video/mp4" />              
             </video> 
           </div>
             <!--deskripsi video end-->
@@ -45,19 +45,19 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-success" href="#video" aria-controls="komen" role="tab" data-toggle="tab"> 
-                    <img src="{{asset('assets/img/video.png')}}" width="30">
+                    <img src="http://localhost/Backend/assets/img/video.png" width="30">
                       <br> Video
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-success" href="#lokasi" aria-controls="komen" role="tab" data-toggle="tab">
-                    <img src="{{asset('assets/img/Lokasi.png')}}" width="30">
+                    <img src="http://localhost/Backend/assets/img/Lokasi.png" width="30">
                       <br>Lokasi
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-success" href="#simpan" aria-controls="komen" role="tab" data-toggle="tab">
-                    <img src="{{asset('assets/img/love.png')}}" width="30">
+                    <img src="http://localhost/Backend/assets/img/love.png" width="30">
                     <br>simpan
                   </a>
                 </li>
@@ -80,7 +80,7 @@
                     <h2 class="card-title pricing-card-title">Rp.  {{number_format($data->hargaOnderdil)}} <small class="text-muted"></small></h2>
                       <ul class="list-unstyled mt-3 mb-4 text-muted">
                           <li><b class="jenis-kos"> <h4> {{$data->namaOnderdil}} </h4></b></li>
-                          <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small>{{$data->updated_at}}</small></li>
+                          <li type="bullet"><img src="http://localhost/Backend/assets/image/small-centang.png" alt="" style="width: 10px"><small>{{$data->updated_at}}</small></li>
                         </ul>
                         <a href="{{route('onderdildetail', ['id' => $data->idOnderdil])}}">
                           <button type="button" class="btn btn-lg btn-block btn-outline-primary">Pesan Sekarang</button>

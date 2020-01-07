@@ -28,4 +28,14 @@ class PemesananController extends Controller {
         return redirect()->route('home');
     
     }
+
+    public function data_pemesanan(Request $request){
+
+        $data_pemesanan = Pemesanan::where('id_pemesan','=', Auth::user()->id_pelanggan)->first();
+        
+        dd($data_pemesanan);
+
+        return view('pages.data_pemesanan')
+                ->withpemesanan($data_pemesanan);
+    }
 }

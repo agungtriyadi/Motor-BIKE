@@ -15,7 +15,7 @@
         <div class="col mx-auto">
             <div class="row justify-content-start">
                 <div class="col-3 text-center text-white">
-                 <a href="{{route('home')}}"><img class="w-100" src="{{asset('assets/motor/content/Logo.png')}}" alt=""></a>                 
+                 <a href="{{route('home')}}"><img class="w-100" src="http://localhost/Backend/assets/motor/content/Logo.png" alt=""></a>                 
                 </div>
                 <div class="col-8">
                   <b class="custom-display-4">Motor Bike</b>
@@ -69,18 +69,18 @@
     <!-- Social buttons -->
     <ul class="list-unstyled list-inline text-center">
       <li class="list-inline-item">       
-        <a href="#"> <img src="{{asset('assets/image/fb-icon.png')}}" alt="" width="40px"></a>
+        <a href="#"> <img src="http://localhost/Backend/assets/image/fb-icon.png" alt="" width="40px"></a>
       </li>
 
       <li class="list-inline-item">
-        <a href="#"> <img src="{{asset('assets/image/twitter-icon.png')}}" alt="" width="40px">
+        <a href="#"> <img src="http://localhost/Backend/assets/image/twitter-icon.png" alt="" width="40px">
       </li>
 
       <li class="list-inline-item">
-        <a href="#"><img src="{{asset('assets/image/gplus-icon.png')}}" alt="" width="40px">
+        <a href="#"><img src="http://localhost/Backend/assets/image/gplus-icon.png" alt="" width="40px">
       </li>
       <li class="list-inline-item">
-        <a href="#"><img src="{{asset('assets/image/linked-icon.png')}}" alt="" width="45px">
+        <a href="#"><img src="http://localhost/Backend/assets/image/linked-icon.png" alt="" width="45px">
       </li>
     </ul>
     <!-- Social buttons -->

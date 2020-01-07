@@ -7,7 +7,7 @@
             <div class="carousel-item active center border-25" >
               <div class="row justify-content-md-center">
                 <div class="center w-20" style="height: 400px; border-radius: 50px;" >
-                  <img src="{{asset('assets/image/icon-peringatan.png')}}" alt="" style="opacity: 0.1">
+                  <img src="http://localhost/Backend/assets/image/icon-peringatan.png" alt="" style="opacity: 0.1">
                 </div>
               </div>              
               <div class="carousel-caption ">

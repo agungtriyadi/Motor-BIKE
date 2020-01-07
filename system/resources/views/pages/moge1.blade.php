@@ -13,7 +13,7 @@
                       <div class="carousel-inner">                                                      
                                   <div class="carousel-item active">
                                       <!--item slider start-->
-                                      <img src="{{asset('assets/motor/motor/' . $data->imgmtr)}}" class="d-block w-100 " alt="...">
+                                      <img src="http://localhost/Backend/assets/motor/motor/{{$data->imgmtr}}" class="d-block w-100 " alt="...">
                                   </div>
                       </div>
                       
@@ -23,7 +23,7 @@
             <!--start deskripsi video-->
           <div role="tabpanel" class="tab-pane fade" id="video"> 
             <video controls="controls" width="100%" height="440">
-              <source src="{{asset('assets/vid/b.mp4')}}" type="video/mp4" />              
+              <source src="http://localhost/Backend/assets/vid/b.mp4" type="video/mp4" />              
             </video> 
           </div>
             <!--deskripsi video end-->
@@ -39,25 +39,25 @@
             <div align="center">
               <ul class="nav nav-tabs justify-content-start" >
                 <li class="nav-item">
-                  <a class="nav-link text-success" href="#foto" aria-controls="home" role="tab" data-toggle="tab"><img src="{{asset('assets/img/foto.png')}}" width="30"> 
+                  <a class="nav-link text-success" href="#foto" aria-controls="home" role="tab" data-toggle="tab"><img src="http://localhost/Backend/assets/img/foto.png" width="30"> 
                       <br> Foto
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-success" href="#video" aria-controls="komen" role="tab" data-toggle="tab"> 
-                    <img src="{{asset('assets/img/video.png')}}" width="30">
+                    <img src="http://localhost/Backend/assets/img/video.png" width="30">
                       <br> Video
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-success" href="#lokasi" aria-controls="komen" role="tab" data-toggle="tab">
-                    <img src="{{asset('assets/img/Lokasi.png')}}" width="30">
+                    <img src="http://localhost/Backend/assets/img/Lokasi.png" width="30">
                       <br>Lokasi
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-success" href="#simpan" aria-controls="komen" role="tab" data-toggle="tab">
-                    <img src="{{asset('assets/img/love.png')}}" width="30">
+                    <img src="http://localhost/Backend/assets/img/love.png" width="30">
                     <br>simpan
                   </a>
                 </li>
@@ -82,7 +82,7 @@
                                 
                                   <div class="card mb-4 border-25">
                                       <div>
-                                          <img class="card-img-top" src="{{asset('assets/motor/motor/' . $dataPromo->motor['imgmtr'])}}"  alt="Card image cap">
+                                          <img class="card-img-top" src="http://localhost/Backend/assets/motor/motor/{{$dataPromo->motor['imgmtr']}}"  alt="Card image cap">
                                               <div class="card-body">
                                                         <h4 class="card-title text-muted">IDR. <span style="text-decoration: line-through">{{number_format($dataPromo->motor['hargaMtr'])}}</span></small></h4>
                                                         <h6 class="card-title pricing-card-title">Promo : IDR.  {{number_format($dataPromo->hargaPromo)}}</h6>
@@ -112,7 +112,7 @@
                           <li type="bullet">Jenis : {{$data->jenisMtr}}</li>
                           <li> Plat   : {{$data->platMtr}}</li>
                           <li type="bullet">{{$data->keteranganMtr}}</li>
-                          <li type="bullet"><img src="{{asset('assets/image/small-centang.png')}}" alt="" style="width: 10px"><small>{{$data->updated_at}}</small></li>
+                          <li type="bullet"><img src="http://localhost/Backend/assets/image/small-centang.png" alt="" style="width: 10px"><small>{{$data->updated_at}}</small></li>
                         </ul>
                         @if (Auth::check())
                               <a href="{{route('pemesanan_motor', ['id' => $data -> idmotor])}}">

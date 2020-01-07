@@ -13,7 +13,7 @@
             <!-- Full-width images with number and caption text -->
                         @foreach($data as $img)  
                           <div class="mySlides fade">
-                            <img src="{{asset('assets/motor/registrasi/'. $img->nama)}}" class="border-25 w-100">
+                            <img src="http://localhost/Backend/assets/motor/registrasi/'{{$img->nama}}" class="border-25 w-100">
                           </div>
                         @endforeach
               </div>
@@ -80,11 +80,11 @@
   </div><!--end modal-->
   <ul class="list-unstyled list-inline text-center">
       <li class="list-inline-item">       
-        <a href="https://www.facebook.com"> <img src="{{asset('assets/image/fb-icon.png')}}" alt="" width="40px"></a>
+        <a href="https://www.facebook.com"> <img src="http://localhost/Backend/assets/image/fb-icon.png" alt="" width="40px"></a>
       </li>
 
       <li class="list-inline-item">
-        <a href="https://accounts.google.com/ServiceLogin/signinchooser?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dlog%2Bin%2Bgoogle%26oq%3Dlog%2Bin%2Bgoogle%26aqs%3Dchrome..69i57j0l5.3954j1j4%26sourceid%3Dchrome%26ie%3DUTF-8&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><img src="{{asset('assets/image/gplus-icon.png')}}" alt="" width="40px"></a>
+        <a href="https://accounts.google.com/ServiceLogin/signinchooser?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dlog%2Bin%2Bgoogle%26oq%3Dlog%2Bin%2Bgoogle%26aqs%3Dchrome..69i57j0l5.3954j1j4%26sourceid%3Dchrome%26ie%3DUTF-8&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><img src="http://localhost/Backend/assets/image/gplus-icon.png" alt="" width="40px"></a>
       </li>
     </ul>   
  	</div>
