@@ -29,7 +29,7 @@
               </li>    
               <li class="nav-item dropdown">
                   @if (Auth::check())
-                      <a class="nav-link " href="{{route('login')}}" >Logout</a>
+                      <a class="nav-link " href="{{route('logout')}}" >Logout</a>
                     <!-- <span>{{ Auth::user()->nama}}</span> -->
                   @else
                     <a class="nav-link" href="{{route('login')}}" >Masuk</a>

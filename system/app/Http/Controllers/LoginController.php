@@ -10,12 +10,13 @@ class LoginController extends Controller
 {
     public function pageLogin(Request $request){ 
         //dd($request->toArray());              
-        Auth::logout();
+       // Auth::logout();
         return view('login');
     }
     public function logout(Request $request) {
-        Auth::logout();
-        return Redirect::back();
+        $request->session()->flush();
+        //Auth::logout();
+        return Redirect()->route('home');
       }
     
 }

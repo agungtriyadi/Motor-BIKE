@@ -46,6 +46,12 @@ class TestLagiController extends Controller {
            //($request -> toArray());
            //dd(Auth()::nama)
            //return redirect()->back();
+
+            if($request->has('url')){
+                return redirect($request->url);
+            }
+            
+
            return redirect()->route('home');  
            //return view('pages.home')
             
