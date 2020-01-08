@@ -13,7 +13,7 @@
             <!-- Full-width images with number and caption text -->
                         @foreach($data as $img)  
                           <div class="mySlides fade">
-                            <img src="http://localhost/Backend/assets/motor/registrasi/'{{$img->nama}}" class="border-25 w-100">
+                            <img src="http://localhost/Backend/assets/motor/registrasi/{{$img->nama}}" class="border-25 w-100">
                           </div>
                         @endforeach
               </div>
