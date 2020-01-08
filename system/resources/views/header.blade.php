@@ -17,7 +17,7 @@
                   <a class="nav-link" href="{{route('promo')}}">Promo</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#">Tersimpan</a>
+                  <a class="nav-link" href="{{route('data_pemesanan')}}?url={{Request::fullUrl()}}">Pesanan</a>
               </li>
               <!--  @if (Auth::check())
               <li class="nav-item">

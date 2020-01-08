@@ -25,7 +25,7 @@ class Pemesanan extends Model
      * @var array
      */
     public function motor(){
-    	return $this->belongsTo('App\Models\Motor', 'idmotor');
+    	return $this->hasOne('App\Models\Motor', 'idmotor', 'id_motor');
     }
         
 }

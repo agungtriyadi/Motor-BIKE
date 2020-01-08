@@ -31,11 +31,29 @@ class PemesananController extends Controller {
 
     public function data_pemesanan(Request $request){
 
-        $data_pemesanan = Pemesanan::where('id_pemesan','=', Auth::user()->id_pelanggan)->first();
+        if (!Auth::check()){
+            return redirect()->route('login');
+        }
+
+        //$data_pemesanan = Pemesanan::where('id_pemesan','=', Auth::user()->id_pelanggan)->first();
+        $data_akhir = Pemesanan::with(['motor'])->get()->where('id_pemesan','=', Auth::user()->id_pelanggan);
         
-        dd($data_pemesanan);
+        //dd($data_akhir->toArray());
 
         return view('pages.data_pemesanan')
-                ->withpemesanan($data_pemesanan);
+                ->withpemesanan($data_akhir);
+    }
+
+    public function hapus_pemesanan (Request $request, $id){
+        $dataPemesanana = Pemesanan::where('id_pemesanan','=', $id)->first();
+
+        $dataYhapus = [
+            'id_motor'      => $request->id_motor,
+            'id_pemesan'    => $request->id_pemesan,
+            'total'         => $request->total,            
+        ];
+
+        $delete = Pemesanan::where('id_pemesanan','=', $id)->delete($dataYhapus);
+        return redirect()->route('data_pemesanan');
     }
 }

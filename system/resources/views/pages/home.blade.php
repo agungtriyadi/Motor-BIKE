@@ -92,14 +92,16 @@
                                                   <div>
                                                       <img class="card-img-top" src="http://localhost/Backend/assets/motor/motor/{{$dataPromo->motor['imgmtr']}}"  alt="Card image cap">
                                                           <div class="card-body">
-                                                                    <h2 class="card-title text-muted">IDR. <span style="text-decoration: line-through">{{$dataPromo->motor['hargaMtr']}}</span></small></h2>
+                                                                    <h2 class="card-title text-muted">IDR. <span style="text-decoration: line-through">{{number_format($dataPromo->motor['hargaMtr'])}}</span></small></h2>
                                                                     <h6 class="card-title pricing-card-title">Promo : IDR.  {{number_format($dataPromo->hargaPromo)}}</h6>
                                                                     <ul class="list-unstyled mt-3 mb-4 text-muted">
                                                                         <li><b class="jenis-kos">Plat</b> <b>{{$dataPromo->motor['platMtr']}}</b></li>
                                                                         <li type="bullet">{{$dataPromo->motor['keteranganMtr']}}</li>
                                                                         <li type="bullet"><img src="http://localhost/Backend/assets/image/small-centang.png" alt="" style="width: 10px"><small> - Update {{$dataPromo->updated_at}}</small></li>
                                                                     </ul>
-                                                                    <button type="button" class="btn btn-lg btn-block btn-outline-primary" >Telusuri</button>
+                                                                    <a href="{{route('moge1', ['id' => $dataPromo->idmotor])}}">
+                                                                      <button type="button" class="btn btn-lg btn-block btn-outline-primary" >Telusuri</button>
+                                                                    </a>
                                                           </div>
                                                   </div>
                                               </div> <!-- swiper-slide -->

@@ -35,12 +35,11 @@ Route::get('/motor', 'MotorController@index')->name('motor');
 
 
 Route::get('/data_pemesanan','PemesananController@data_pemesanan')->name('data_pemesanan');
-
+Route::get('hapus_pesanan/{id}','PemesananController@hapus_pemesanan')->name('hapus_pesanan');
 
 
 Route::get('/pelanggan', 'PelangganController@pelanggan')->name('pelanggan');
 Route::get('/profil_pelanggan', 'PelangganController@profil')->name('profil_pelanggan');
-
 
 
 Route::get('/registrasi', 'RegistrasiController@index')->name('registrasi');
@@ -50,15 +49,9 @@ Route::get('logout','LoginController@logout')->name('logout');
 
 Route::get('/login','LoginController@pageLogin')->name('login');
 Route::post('/login','TestLagiController@fnLogin');
-Route::post('/fnLogin', 'TestLagiController@fnLogin');
+Route::post('/fnLogin','TestLagiController@fnLogin');
 
 
-
-
-
-Route::get('/admin','Admin\AdminController@Login');
-Route::post('/admin','Admin\OperasionalAdminController@LoginAdmin');
-Route::get('/data_admin','Admin\DataController@LoadingPage')->name('show_data');
 Route::get('/tambah_penawaran','Admin\TambahPenawaranController@index')->name('tambah_penawaran');
 Route::get('/data_pelanggan','Admin\DataPelangganController@index')->name('data_pelanggan');
 Route::get('/data_promo','Admin\DataPromoController@index')->name('data_promo');
